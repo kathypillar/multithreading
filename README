@@ -1,6 +1,8 @@
-Made by Katherine Halliday and Akulor Fru
+Made by Katherine Halliday
 
 Info:
+	This program achieves multi threading using a simple divide and conquer scheme wherin a larger array is split up into multiple smaller arrays and then they are sorted concurrently and merged.
 Compiling:
-	Build and run in linux using $make, this also opens up the data that has just been generated.
+	Build and run in linux using $make, this also opens up the data that has just been generated. Just be warned it takes a while for the largest arrays to be sorted with the inefficient means.
 Efficiency:
+	Bubble and Insertion Sort unthreaded are O(n^2), and Merge and Quick(cpp) sort are O(nlogn). The threaded variants are harder to find out however.
