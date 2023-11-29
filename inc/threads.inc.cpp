@@ -41,7 +41,7 @@ auto multiThread(void (*func)(int*,unsigned long),int* arr,unsigned long arrLen,
 				start1 = arr+((i)*(2*(t-j+1))*(arrLen/NUM_CORES));
 				end2 = start1+((2*(t-j+1))*(arrLen/NUM_CORES))+((i+1>=j)*(arrLen%NUM_CORES)); //mod to account for uneven arrays
 				end1 = end2-(((t-j+1-(j==1)))*(arrLen/NUM_CORES))-((i+1>=j)*(arrLen%NUM_CORES));
-				if((arr+arrLen)<end1) //TODO this logic only works for 6 cores
+				if((arr+arrLen)<end1)
 				threads[i] = std::thread(mergeWrapper,start1,end1,end2);
 
 			}
